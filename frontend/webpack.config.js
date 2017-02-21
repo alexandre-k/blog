@@ -2,7 +2,7 @@
 
 const webpack = require('webpack');
 const path = require('path');
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+// const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 const BUILD_DIR = path.resolve(__dirname, 'build');
 const APP_DIR = path.resolve(__dirname, 'app');
@@ -10,7 +10,7 @@ const APP_DIR = path.resolve(__dirname, 'app');
 module.exports = {
     devServer: {
         historyApiFallback: true,
-        hot: true,
+        // hot: true,
         inline: true,
         // progress: true,
         contentBase: './app',
@@ -40,7 +40,7 @@ module.exports = {
         extensions: ['.js', '.jsx']
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new OpenBrowserPlugin({ url: 'http://localhost:8080' })
+        // new webpack.HotModuleReplacementPlugin(),
+        // new OpenBrowserPlugin({ url: 'http://localhost:8080' })
     ]
 };

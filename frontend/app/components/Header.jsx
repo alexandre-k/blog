@@ -1,5 +1,5 @@
 import React from 'react';
-import { Callout } from 'react-foundation';
+import { Callout, Colors} from 'react-foundation';
 
 
 export default class Header extends React.Component {
@@ -14,7 +14,7 @@ export default class Header extends React.Component {
     render() {
         return (
             <div class='panel'>
-                <Callout>
+                <Callout color={Colors.SECONDARY}>
                     <h1>{this.props.title}</h1>
                 </Callout>
             </div>
