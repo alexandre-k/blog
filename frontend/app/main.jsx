@@ -1,8 +1,32 @@
+import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Posts from './components/App';
+import App from './components/App';
+
+const rootElement = document.getElementById('app');
 
 ReactDOM.render(
-    <Posts />,
-    document.body.appendChild(document.createElement('dib'))
-);
+    <App />,
+    rootElement
+)
+
+/*
+ * ReactDOM.render(
+ *     <AppContainer>
+ *         <App />
+ *     </AppContainer>,
+ *     rootElement
+ * );
+ *
+ * if (module.hot) {
+ *     const nextApp = require('./components/App').default;
+ *     module.hot.accept('./components/App', () => {
+ *             ReactDOM.render(
+ *             <AppContainer>
+ *                 <NextApp />
+ *             </AppContainer>,
+ *             rootElement
+ *         );
+ *     });
+ * }
+ */

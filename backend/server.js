@@ -5,15 +5,12 @@ import HapiAuthJWT from 'hapi-auth-jwt2';
 import HapiReactViews from 'hapi-react-views';
 import routes from './lib/routes';
 
-const server = new Hapi.Server({
-    debug: {
-        request: ['info']
-    }
-});
+const server = new Hapi.Server();
 
 server.connection({
     host: 'localhost',
-    port:3000
+    port:3000,
+    routes: {cors: true}
 });
 
 const people = {

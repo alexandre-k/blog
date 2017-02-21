@@ -5,7 +5,6 @@ function getPosts() {
     axios
         .get(URL + '/posts')
         .then((posts) => {
-            console.log(posts.data.data)
             return posts.data.data;
         })
         .catch((error) => {
@@ -13,4 +12,4 @@ function getPosts() {
         })
 }
 
-module.exports = getPosts
+export { getPosts };
