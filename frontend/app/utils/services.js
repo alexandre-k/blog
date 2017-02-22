@@ -12,4 +12,15 @@ function getPosts() {
         })
 }
 
-export { getPosts };
+function getPostDetails() {
+    return axios
+        .get(URL + '/post')
+        .then((post) => {
+            return post.data.data;
+        })
+        .catch((error) => {
+            return error;
+        })
+}
+
+export { getPosts, getPostDetails };
