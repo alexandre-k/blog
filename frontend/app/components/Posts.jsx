@@ -2,6 +2,7 @@ import React from 'react';
 import{ Badge, Row, Column } from 'react-foundation';
 import { GridList, GridTitle } from 'material-ui/GridList';
 import { getPosts } from '../utils/services';
+import { Link } from 'react-router'
 
 // require('./Posts.css');
 
@@ -29,6 +30,9 @@ class Posts extends React.Component {
             this.setState({posts: posts});
 
         })
+        console.log('PROPS')
+        console.log(this.props)
+        console.log('END')
     }
     render() {
         return (
@@ -37,11 +41,12 @@ class Posts extends React.Component {
                 <button>Test</button>
                 <Row className='display'>
                     <Column small={9}>
+                        {this.props.children}
                         {
                             this.state.posts.map(object => {
                                 return (
                                     <section>
-                                    <h2>{ object.title }</h2>
+                                        {/*           <h2><Link to='/post/:'{this.object._id}>{ object.title }</Link></h2>*/}
                                     <h3>{ object.author }</h3>
                                     <p dangerouslySetInnerHTML={{ __html: object.body }}></p>
                                     </section>

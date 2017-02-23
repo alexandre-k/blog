@@ -1,7 +1,8 @@
-import React from 'react';
-import Posts from './Posts';
-import Header from './Header';
-import Footer from './Footer';
+import React from 'react'
+import Posts from './Posts'
+import Header from './Header'
+import Footer from './Footer'
+import D3 from './D3'
 
 
 

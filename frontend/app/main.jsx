@@ -1,13 +1,17 @@
-import { AppContainer } from 'react-hot-loader';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory } from 'react-router';
-import App from './components/App';
+import { AppContainer } from 'react-hot-loader'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Router, Route, browserHistory } from 'react-router'
+import App from './components/App'
+import PostDetails from './components/PostDetails'
 
 const rootElement = document.getElementById('app');
 
 ReactDOM.render(
-    <App />,
+    <Router history={browserHistory}>
+        <Route path='/' component={App} />
+        <Route path='/post/:postId' component={PostDetails} />
+    </Router>,
     rootElement
 )
 
