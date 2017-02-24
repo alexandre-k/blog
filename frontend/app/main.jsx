@@ -10,7 +10,7 @@ const rootElement = document.getElementById('app');
 ReactDOM.render(
     <Router history={browserHistory}>
         <Route path='/' component={App} />
-        <Route path='/post/:postId' component={PostDetails} />
+        {/*        <Route path='/post/:postId' component={PostDetails} />*/}
     </Router>,
     rootElement
 )
